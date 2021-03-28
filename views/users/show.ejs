@@ -1,0 +1,17 @@
+<% layout('/layouts/boilerplate') %> 
+
+<h1><%= `${user.firstName} ${user.lastName}` %>  </h1>
+<h2><%= user.ntrp %> </h2>
+<h2><%= user.location %> </h2>
+<p>
+  <a href="/users/<%= user._id %>/edit ">Edit</a>
+</p>
+
+<p>
+  <form action="/users/<%= user._id %>?_method=DELETE " method="POST">
+    <button>Delete</button>
+  </form>
+</p>
+<footer>
+  <a href="/users">All Users</a>
+</footer>

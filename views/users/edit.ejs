@@ -1,0 +1,20 @@
+<% layout('/layouts/boilerplate') %> 
+
+<h1>Edit User</h1>
+<form action="/users/<%= user._id %>?_method=PUT" method="POST">
+<div>
+  <label for="firstName">first name</label>
+  <input type="text" id="firstName" name="user[firstName]" value="<%= user.firstName %> ">
+</div>
+<div>
+  <label for="lastName">last name</label>
+  <input type="text" id="lastName" name="user[lastName]" value="<%= user.lastName %> ">
+</div>
+
+<button>Update User</button>
+
+</form>
+
+<div>
+  <a href="/users/<%= user._id%>">Back To Users</a>
+</div>

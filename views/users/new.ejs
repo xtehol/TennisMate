@@ -1,0 +1,19 @@
+<% layout('/layouts/boilerplate') %> 
+
+<form action="/users" method="POST">
+<div>
+  <label for="firstName">first name</label>
+  <input type="text" id="firstName" name="user[firstName]">
+</div>
+<div>
+  <label for="lastName">last name</label>
+  <input type="text" id="lastName" name="user[lastName]">
+</div>
+
+<button>Add User</button>
+
+</form>
+
+<div>
+  <a href="/users">All Users</a>
+</div>

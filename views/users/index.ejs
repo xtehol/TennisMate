@@ -1,0 +1,11 @@
+<% layout('/layouts/boilerplate') %> 
+
+<h1>All Tennis Players!!</h1>
+<div>
+  <a href="/users/new">Add User</a>
+</div>
+<ul>
+  <% for(let user of users) { %>
+    <li><a href="/users/<%=user._id%>"><%=`${user.firstName} ${user.lastName}`%></a></li>
+  <% } %>  
+</ul>
